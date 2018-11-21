@@ -3,9 +3,10 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -32,7 +33,7 @@ public class Controller implements Initializable {
             Double w = new Double(weight.getText());
             Double h = new Double(height.getText());
 
-            Double bmi = w * (h * h);
+            Double bmi = w / (h * h);
 
             result.setText(String.format("%.2f", bmi));
         } catch(NumberFormatException e) {
