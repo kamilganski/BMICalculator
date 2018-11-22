@@ -32,15 +32,21 @@ public class Controller implements Initializable {
         try {
             Double w = new Double(weight.getText());
             Double h = new Double(height.getText());
+            Double bmi;
 
-            Double bmi = w / (h * h);
+            if(h < 2.5) {
+                bmi = w / (h * h);
+            } else {
+                bmi = (w / (h * h)) * 10000.0;
+            }
 
             result.setText(String.format("%.2f", bmi));
+
         } catch(NumberFormatException e) {
-            weight.setText("Wpisz poprawną wartość");
+            weight.setPromptText("Wpisz poprawną wartość");
             weight.selectAll();
             weight.requestFocus();
-            height.setText("Wpisz poprawną wartość");
+            height.setPromptText("Wpisz poprawną wartość");
             height.selectAll();
         }
     }

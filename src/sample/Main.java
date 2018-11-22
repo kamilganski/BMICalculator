@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("BMI calculator");
-        primaryStage.setScene(new Scene(root, 350, 300));
+        primaryStage.setScene(new Scene(root, 350, 330));
         primaryStage.show();
     }
 
