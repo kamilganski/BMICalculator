@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -21,14 +21,14 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="330.0" prefWidth="350.0">
+      <Pane prefHeight="400.0" prefWidth="350.0">
          <children>
-            <Label layoutX="63.0" layoutY="42.0" prefHeight="27.0" prefWidth="70.0" text="Wzrost:">
+            <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="42.0" prefHeight="27.0" prefWidth="83.0" text="Wzrost:">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="63.0" layoutY="104.0" prefHeight="27.0" prefWidth="70.0" text="Waga:">
+            <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="104.0" prefHeight="27.0" prefWidth="83.0" text="Waga:">
                <font>
                   <Font size="18.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Font size="18.0" />
                </font>
             </RadioButton>
-            <Button fx:id="run" layoutX="105.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="140.0" text="Oblicz">
+            <Button fx:id="run" layoutX="105.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="140.0" text="Oblicz">
                <font>
                   <Font size="24.0" />
                </font>
@@ -56,6 +56,11 @@
             <Label fx:id="result" alignment="CENTER" layoutX="125.0" layoutY="274.0" prefHeight="27.0" prefWidth="100.0" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="value" alignment="CENTER" layoutX="57.0" layoutY="336.0" prefHeight="35.0" prefWidth="237.0" textFill="RED">
+               <font>
+                  <Font size="24.0" />
                </font>
             </Label>
          </children>
