@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 
 import static javafx.scene.paint.Color.*;
 
-public class Controller implements Initializable {
+public class BmiController implements Initializable {
 
     @FXML
     private TextField weight;
