@@ -21,7 +21,7 @@ public class BmiController implements Initializable {
     private TextField height;
 
     @FXML
-    private RadioButton women;
+    private RadioButton woman;
 
     @FXML
     private RadioButton man;
@@ -48,36 +48,36 @@ public class BmiController implements Initializable {
             result.setText(String.format("%.2f", bmi));
 
             if (bmi <= 16) {
-                value.setText("Wygłodzenie");
+                value.setText("Starvation");
                 value.setTextFill(RED);
             } else if (bmi > 16 && bmi <= 16.99) {
-                value.setText("Wychudzenie");
+                value.setText("Emaciation");
                 value.setTextFill(RED);
             } else if (bmi > 17 && bmi <= 18.49) {
-                value.setText("Niedowaga");
+                value.setText("Underweight");
                 value.setTextFill(ORANGE);
             } else if (bmi > 18.5 && bmi <= 24.99) {
-                value.setText("Wartość prawidłowa");
+                value.setText("Normal");
                 value.setTextFill(GREEN);
             } else if (bmi > 25 && bmi <= 29.99) {
-                value.setText("Nadwaga");
+                value.setText("Overweight");
                 value.setTextFill(ORANGE);
             } else if (bmi > 30 && bmi <= 34.99) {
-                value.setText("I stopień otyłości");
+                value.setText("Obese");
                 value.setTextFill(RED);
             } else if (bmi > 35 && bmi <= 39.99) {
-                value.setText("II stopień otyłości");
+                value.setText("Severely obese");
                 value.setTextFill(RED);
             } else if (bmi > 40) {
-                value.setText("Otyłość skrajna");
+                value.setText("Morbidly obese");
                 value.setTextFill(RED);
             }
 
         } catch(NumberFormatException e) {
-            weight.setPromptText("Wpisz poprawną wartość");
+            weight.setPromptText("Enter the correct value");
             weight.selectAll();
             weight.requestFocus();
-            height.setPromptText("Wpisz poprawną wartość");
+            height.setPromptText("Enter the correct value");
             height.selectAll();
         }
     }
